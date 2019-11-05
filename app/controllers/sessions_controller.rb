@@ -32,29 +32,12 @@ class SessionsController < ApplicationController
     erb :login
   end
 
-  post '/signup' do
-    user = User.new(name: params[:name], username: params[:username], password: params[:password])
-    binding.pry
-    user.save
-      redirect '/login'
-    end
 
 
 
-  get '/signup' do
-    redirect '/appointments' if logged_in?
-    erb :signup
-  end
 
-  get '/bookappt' do
-    erb :newappts
-  end
 
-  post '/bookappt' do
-     appointment = Appointment.new(name: params[:name], user_id: current_user.id)
-     appointment.save
-     redirect '/appointments'
-  end
+
 
 
 end
