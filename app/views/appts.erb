@@ -1,0 +1,9 @@
+<header><img width="100" height="100" src="https://previews.123rf.com/images/igoun/igoun1810/igoun181000081/109842072-car-vector-icon-isolated-simple-front-car-logo-illustration-sign.jpg" class="img-responsive main-image"></header>
+
+<%= "#{@appt.name} - #{@appt.date}" %>
+<form action="/appts/<%=@appt.id%>" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="DELETE">
+  <input type="submit" value="DELETE APPOINTMENT">
+
+  </form>
+  <a href="/appts/<%=@appt.id%>/edit">Edit Your Appointment</a>
