@@ -1,0 +1,7 @@
+<form action='/appts/<%=@appt.id%>' method="POST">
+  <input type="hidden" id="hidden" name="_method" value="PATCH">
+  Edit Name:<input type="text" name="name" required>
+  Edit Date:<input type="date" name="date" required>
+  <input type="submit" value="Change Details">
+
+</form>
